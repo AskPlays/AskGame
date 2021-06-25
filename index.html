@@ -3,17 +3,43 @@
 <head>
     <title>AskGame</title>
     <link href="./public/style.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('span.code, pre code').each(function(i, block) {
+          hljs.highlightElement(block);
+        });
+      });
+    </script>
 </head>
 <body>
     <div class="content">
         <div class="title">AskGame</div>
         <div class="group">
+            <span class="group-header">Installation</span>
+            <p>
+                Either download the repository or link to the file hosted on github pages.<br>
+                Add <span class="code language-js">import GAME from 'https://askplays.github.io/AskGame/AskGame.js'</span> to your js file<br/>
+                To make <span class="code language-js">import</span> work, make sure to use 
+                <span class="code language-html">&lt;script type="module"&gt;</span> in your html
+            </p>
+        </div>
+        <div class="group">
             <span class="group-header">Usage</span>
             <p>
-                Either download or link to this pages.<br>
-                Add <span class="code">import GAME from 'https://askplays.github.io/AskGame/AskGame.js'</span> to your js file<br/>
-                To make <span class="code">import</span> work, make sure to use 
-                <span class="code">&lt;script type="module"&gt;</span> in your html
+                Use <span class="code language-js">GAME.init(init, loop)</span> to setup your game<br/><br/>
+                Example <br>
+                <pre class="language-js"><code>import GAME from 'https://askplays.github.io/AskGame/AskGame.js';
+
+GAME.init(()=>{
+    GAME.size(400, 400);
+}, (time, delta)=>{
+    console.log(time);
+});
+</code></pre>
             </p>
         </div>
         <div class="group">

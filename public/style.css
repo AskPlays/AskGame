@@ -13,9 +13,18 @@ a {
 
 span.code {
 	border-radius: 4px;
-	background-color: #111;
 	padding: 0px 4px;
-	color: #5a6;
+}
+
+.inline{
+	display: inline-block;
+	margin:0px;
+}
+
+.inline code.hljs {
+	display: inline-block;
+	border-radius: 4px;
+	padding: 0px 4px;
 }
 
 .group-header {
