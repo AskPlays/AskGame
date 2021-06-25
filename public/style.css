@@ -1,0 +1,470 @@
+body {padding: 0; margin: 0; width: 100%; height: 100%; background-color: #333; color: white; font-family: Roboto;}
+
+@font-face {
+    font-family: 'Roboto'; /*a name to be used later*/
+    src: url('Roboto-Regular.ttf'); /*URL to font*/
+}
+
+a {
+	cursor: pointer;
+	color: #5a6;
+	text-decoration: none;
+}
+
+.group-header {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.title {
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 20px;
+}
+
+#cog {
+	position: absolute;
+	font-size: 60px;
+	top: 100px;
+	left: 26px;
+	color: white;
+	user-select: none; 
+	cursor: pointer;
+}
+
+#settings {
+	position: absolute;
+	top: 100px;
+	left: 160px;
+	border: solid white 2px;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	display: none;
+}
+
+#account-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	display: none;
+}
+
+#account {
+	text-align: center;
+	margin: auto;
+	border: solid white 2px;
+	padding: 20px;
+	background-color: #333;
+	color: white;
+	display: none;
+	font-size: 20px;
+	z-index: 1;
+	background-color: #333;
+}
+
+#account .group-header {
+	font-size: 40px;
+}
+
+#account * {
+	margin: 10px;
+	
+}
+
+#cv {
+	flex-shrink: 0;
+}
+
+canvas {
+    vertical-align: middle;
+}
+
+.canvi-div {
+	margin: 20px;
+	display: inline-block;
+	width: 82px;
+	overflow: hidden;
+}
+
+.canvi {
+	border: white solid 1px;
+	padding: 0px;
+}
+
+/*#canvi {
+	flex: 1;
+}*/
+
+#aside {
+	flex-grow: 1;
+	flex-shrink: 1;
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	position: relative;
+}
+
+#close-chat {
+	float: right;
+}
+
+#close-leaderboard {
+	position: absolute;
+	right:0;
+	font-size: 40px;
+	padding: 20px;
+}
+
+#chat {
+	color: white;
+	flex-grow: 1;
+	flex-shrink: 1;
+	display: flex;
+	flex-direction: column;
+	/*padding: 20px;
+	padding-left: 0px;*/
+	/*margin: 20px;
+	margin-left: 0px;*/
+	height: 648px;
+	position: absolute;
+	top:0px;
+	background-color: #333;
+	width:100%;	
+}
+
+#chat > * {
+	border: white solid 1px;
+	border-bottom: none;
+}
+
+#chat-box {
+	color: white;
+	height:100%;
+	flex: 1;
+	padding: 8px;
+	overflow-y: scroll;
+}
+
+#chat-box > p {
+	padding: 8px;
+	margin: 0px;
+	word-break:break-all;
+}
+
+#chat-input {
+	color: white;
+	padding: 8px;
+	background-color: #333;
+	border:#fff solid 2px;
+	border-radius: 2px;
+}
+
+#chat-input:focus-visible {
+	outline: none;
+}
+
+#players {
+	padding: 20px 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+#players > * {
+	border: white solid 1px;
+}
+
+#player-list {
+	/*width: 100px;*/
+	min-width: 200px;
+	flex-shrink: 0;
+	border-top: none;
+	flex: 1;
+}
+
+#player-list > a {
+	word-break:break-all;
+	padding: 8px;
+	margin: 0px;
+	display: block;
+}
+
+#modes {
+	padding: 20px 0px;
+	display: none;
+	flex-direction: column;
+}
+
+#modes > * {
+	border: white solid 1px;
+}
+
+#mode-list {
+	/*width: 100px;*/
+	min-width: 200px;
+	flex-shrink: 0;
+	border-top: none;
+	flex: 1;
+}
+
+#mode-list > a {
+	word-break:break-all;
+	padding: 8px;
+	margin: 0px;
+	display: block;
+}
+
+#custom, #stats {
+	padding: 8px;
+}
+
+#custom > span, #stats > span {
+	margin: 8px;
+}
+
+#custom-list, #stats-list, #custom-settings {
+	margin: 8px;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+}
+
+#cog-wrapper {
+	position: relative;
+}
+
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content:center;
+	background-color: #90f;
+	z-index: 1;
+}
+
+#header a {
+	background-color: #90f;
+	font-size: 20px;
+	padding: 20px;
+}
+
+#header a:hover {
+	background-color: #b5f;
+}
+
+#header .top {
+	background-color: #90f;
+	font-size: 20px;
+	padding: 20px;
+	display: block !important;
+	position: relative !important;
+	top: auto;
+}
+
+#header .top:hover, #header .top:hover > a {
+	background-color: #b5f;
+}
+
+#header .top > a {
+	background-color: #90f;
+	font-size: 20px;
+	padding: 0px;
+	display: block !important;
+}
+
+#header > div {
+	position: relative;
+	display: block !important;
+}
+
+#header div > a  {
+	background-color: #90f;
+	display: none;
+}
+
+#header div:hover > a  {
+	display: block;
+}
+
+#header a:hover  {
+	background-color: #b5f;
+}
+
+#header > div > div  {
+	background-color: #111;
+	position: absolute;
+	display: block;
+	top: 100%;
+	z-index: 1;
+}
+
+#header > div > div > a  {
+	background-color: #111;
+	word-break:keep-all;
+}
+
+#header > div:hover > div > a  {
+	display: block;
+}
+
+#custom-skin {
+	width: 100px;
+}
+
+#custom-ghost {
+	width: 100px;
+}
+
+#leaderboards {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	background-color: #333;
+	/*padding: 0px;*/
+	border: white solid 2px;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+
+#leaderboards > .title {
+	display: flex;
+	justify-content: center;
+}
+
+#leaderboards > .group-header {
+	display: flex;
+	justify-content: center;
+}
+
+#leaderboard {
+	margin:20px;
+	overflow-y: auto;
+	border: white solid 2px;
+	flex: 1;
+}
+
+#leaderboard-contnet {
+	margin:20px;
+	overflow-y: scroll;
+}
+
+#leaderboard-modes {
+	padding:20px;
+	display: flex;
+	justify-content: center;
+}
+
+#leaderboard-modes > button {
+	padding: 8px;
+	border: white solid 2px;
+	background-color: #333;
+	color: #95f;
+	cursor: pointer;
+}
+
+#leaderboard-modes > span {
+	padding: 8px;
+	border: white solid 2px;
+	background-color: #333;
+}
+
+#leaderboard-table {
+	padding: 8px;
+	background-color: #333;
+	color: white;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+td {
+	padding: 8px;
+	border: white solid 2px;
+	background-color: #333;
+	font-weight: normal;
+	text-align: left;
+}
+
+th {
+	color: #95f;
+	padding: 8px;
+	border: white solid 2px;
+	background-color: #333;
+	text-align: left;
+}
+
+.milies {
+	font-size: 12px;
+}
+
+input.effect-settings {
+	width: 50px;
+}
+
+div.effect-set {
+	margin: 8px 0px;
+	margin-left: 16px;
+	display: none;
+}
+
+button.expand-effect {
+	background: none;
+	border: none;
+	color:white;
+	cursor: pointer;
+}
+
+.rotated { 
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.warn {
+	color: #fc5;
+	border: #fc5 solid 1px;
+	background-color: #333;
+}
+
+.replay > input {
+	color: #fff;
+	border: #fff solid 1px;
+	background-color: #333;
+	width: 100px;
+}
+
+.replay > button {
+	color: #fff;
+	border: #fff solid 1px;
+	background-color: #333;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.container {
+	display: none;
+}
+
+.group {
+	padding:20px;
+}
+
+.content {
+	max-width: 1080px;
+	margin: auto;
+}
+
+@media only screen and (max-width: 1080px) {
+	.content {
+		max-width: 720px;
+		margin: auto;
+	}
+}

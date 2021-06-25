@@ -139,7 +139,4 @@ class GAME {
   }
 }
 
-const game = new GAME();
-export default game;
-export const canvas = game.canvas;
-export const ctx = game.ctx;
+export default new GAME();

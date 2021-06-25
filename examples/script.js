@@ -1,12 +1,11 @@
 import GAME from '../AskGame.js';
-import {canvas} from '../AskGame.js';
+//import GAME from 'https://askplays.github.io/AskGame/AskGame.js'; import from github pages
 
 window.GAME = GAME;
 
 GAME.init(()=>{
     GAME.size(400, 400);
     GAME.fullscreen();  
-    //ctx = GAME.ctx;
 }, (time, delta)=>{
     const ctx = GAME.ctx;
     ctx.clearRect(0, 0, GAME.width, GAME.height);
