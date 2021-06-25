@@ -11,6 +11,13 @@ a {
 	text-decoration: none;
 }
 
+span.code {
+	border-radius: 4px;
+	background-color: #111;
+	padding: 0px 4px;
+	color: #5a6;
+}
+
 .group-header {
 	font-size: 20px;
 	font-weight: bold;
