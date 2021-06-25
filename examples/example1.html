@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./res/sprites.js"></script>
+    <script type="module">
+import GAME from '../AskGame.js';
+
+GAME.init(()=>{
+    GAME.size(400, 400); // Setup the canvas to be 400 x 400 pixels
+}, (time, delta)=>{
+    const ctx = GAME.ctx; // Get the canvas context
+    ctx.clearRect(0, 0, GAME.width, GAME.height); // Clear the canvas
+    ctx.font = "30px sans-serif"; // Make the font size bigger
+    ctx.fillText("hello @" + time, 50, 100); // Render the text
+});
+    </script>
+    <link href="../public/style.css" rel="stylesheet">
+</head>
+<body style="background-color: #fff;">
+    
+</body>
+</html>
